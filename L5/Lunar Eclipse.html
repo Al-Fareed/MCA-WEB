@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar Eclipse</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }   
+        body{
+            background-color: black;
+        }
+        .sun{
+            height: 100px;
+            width: 100px;
+            margin-left: auto;
+            margin-right:auto;
+            margin-top:15%;
+            border-radius: 50%;
+            background-color: orange;     
+        }
+        .moon{
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            background-color: aliceblue;
+            animation: move;
+            animation-duration: 5s;
+            position: fixed;
+            animation-timing-function:linear;
+            animation-iteration-count: infinite;
+        }
+        @keyframes move {
+            0%  {left:0px; top:0px;}
+            100% { left:700px; top:250px;}  
+        }
+    </style>
+</head>
+<body>
+   
+        <div class="sun"></div>
+    <div class="moon"></div>
+</body>
+</html>

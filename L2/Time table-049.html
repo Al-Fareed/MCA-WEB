@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Table</title>
+    <style>
+        
+        body{
+            border: 3px solid #0f0e0e;
+            margin: 30px;
+            margin-right: 100px;
+        }
+  
+    
+       #small{
+           font-size: 12px;
+       }
+       th{
+           padding: 5px;
+       }
+       #br, #gap{
+           background-color: rgb(199, 199, 199);
+       }
+       #headers, #header{
+        background-color: rgb(218, 233, 247);
+       }
+       td{
+           text-align: center;
+       }
+    </style>
+</head>
+
+<body >
+    <div class="heading">
+        <table border="0" style="width: 100%;" >
+            <tr>
+            <th rowspan="3" ><img style="float:right " src="mcv16179_MAHE-LOGO-300x300.png" height="90px" width="70px"></th>
+            <th style="font-size: 25px;font-weight: 900px;text-align: left;">MANIPAL INSTITUTE OF TECHNOLOGY</td>
+            </tr>
+
+            <tr>
+            <th style="margin-top:0px ;text-align: left;">MANIPAL</td>
+            </tr>
+            
+            <tr>
+                <td style="margin-left: 0%;text-align: left;"><em>(A constituent of MAHE, Manipal)</em></td>
+            </tr> 
+
+            <tr>
+                <td colspan="3" style="font: weight 900px;text-align: center;"> <center> DEPARTMENT OF <span style="color: red;"> DATA SCIENCE AND COMPUTER APPLICATIONS</span></center></td>
+            </tr>
+
+            <tr>
+                <td colspan="3"><center><b>TIME TABLE:FEB-JUNE 2022</b></center></td>
+            </tr>
+            <tr id="small"> 
+                <td style="width: 250px;">Semester & Section: II SEM MCA Section A</td>
+                <td> <center> Lecture Hall: AB 4 ICL 506</center></td>
+                <td>Effective from: 28/02/2022 </td>
+           
+            </tr>
+       
+        </table>
+    </div>
+    
+    
+    <div class="time-table" style="padding:10px;">
+        <table border="1" style="border-collapse:collapse; width: 100%;">
+            <colgroup>
+                <col span="1" style="background-color:rgb(240, 200, 99)">
+              </colgroup>
+              
+                <tr>
+                    <th ></th>
+                    <th colspan="2" id="headers" >08.00 - 09.00</th>
+                    <th id="headers">09.00 - 10.00</th>
+                    <th id="headers">10.00 - 10.30</th>
+                    <th id="headers">10.30 - 11.30</th>
+                    <th id="headers">11.30 - 12.30</th>
+                    <th id="headers">12.30 - 01.00</th>
+                    <th id="headers">01.00 - 02.00</th>
+                    <th id="headers">02.00 - 03.00</th>
+                    <th id="headers">03.00 - 03.30</th>
+                    <th id="headers">03.30 - 04.30</th>
+                    <th  style="border-right:none ;text-align:right;" id="header">04.30 -</th>
+                      <th style="border-left:none ;text-align:left;" colspan="2" id="header">05.30</th>  
+                </tr>
+
+                <tr>
+                    <td>MON</td>
+                    <td colspan="2">DSA</td>
+                    <td>DA</td>
+                    <td id="br">Break</td>
+                    <td >JP</td>
+                    <td>WT</td>
+                    <td colspan="2" id="br">Lunch Break</td>
+                    <td colspan="4"><-----WT Lab Batch 2(AB/TT)-----></td>
+                    <td  id="gap"></td>
+                </tr>
+                <tr>
+                    <td >TUE</td>
+                    <td id="gap"></td>
+                    <td style="border-right:none ;"></td>
+                    <td colspan="3" style="border-left:none ;" ><-----WT Lab Batch 1(AB/TT)-----></td>
+                    <td>PE-I*</td>
+                    <td colspan="2" id="br">Lunch Break</td>
+                    <td>DA</td>
+                    <td id="br">Break   </td>
+                    <td>DSA</td>
+                    <td colspan="2"></td>
+                </tr>
+                <tr>
+                    <td>WED</td>
+                    <td colspan="2"></td>
+                    <td>WT</td>
+                    <td id="br">Break</td>
+                    <td>JP</td>
+                    <td>PE-I*</td>
+                    <td colspan="2" id="br">Lunch Break</td>
+                    <td colspan="4"><-----DSA Lab Batch 1(LT/SD)-----></td>
+                        <td id="gap"></td>
+                </tr>
+                <tr>
+                    <td>THU</td>
+                    <td colspan="1" id="gap"></td>
+                    <td colspan="4"><-----JP Lab Batch 2(RH/VR)-----></td>
+                    <td colspan="2" id="br">Lunch Break</td>
+                    <td >DA</td>
+                    <td>DSA</td>
+                    <td id="br">Break</td>
+                    <td >JP</td>
+                    <td colspan="2">WT</td>
+                   </tr>
+                <tr>
+                    <td>FRI</td>
+                    <td colspan="2"></td>
+                    <td>DSA</td>
+                    <td id="br">Break</td>
+                    <td >DA</td>
+                    <td>PE-I*</td>
+                    <td colspan="2" id="br">Lunch Break</td>
+                    <td colspan="4"><-----JP Lab Batch 1(RH/VR)-----></td>
+                    <td  id="gap"></td>
+                </tr>
+                <tr>
+                    <td>SAT</td>
+                    <td  id="gap"></td>
+                    <td colspan="4"><-----DSA Lab Batch 2(LT/SD)-----></td>
+                        <td colspan="2" id="br">Lunch Break</td>
+                        <td >JP</td>
+                        <td >WT</td>
+                        <td id="br">Break</td>
+                    <td>DSA</td>
+                    
+                </tr>
+
+        </table>
+        *MIS-IC 506,NoSQL-IC 501,IOT-IC 507
+        <br>
+
+        <!-- end of table -->
+        <center>
+        <table border="1" style="border-collapse: collapse;margin-top: 10px; text-align: center ;" >
+            <tr>
+                <th >Subject <br> Code</th>
+                <th >Subject Name</th>
+                <th >Faculty</th>
+                <th >Subject <br> Code</th>
+                <th >Subject Name</th>
+                <th >Faculty</th>
+            </tr>
+            <tr>
+                <td>MCA 4251</td>
+                <td> Data Analytics</td>
+                <td>DR. POORNIMA P.K(PPK)/ <br> MR.S.S.SHAMEEM(SSS)</td>
+                <td>MCA 5036</td>
+                <td>PE-1 Internet Of Things</td>
+                <td>DR. VIDYA RAO(VR)</td>
+            </tr>
+            <tr>
+                <td>MCA 4252</td>
+                <td> Data Structures and <br> Algorithms</td>
+                <td>MRS. LINDA TOJO(LT)/ <br>DR. SANDHYA DUBEY(SD)</td>
+                <td>MCA 4261</td>
+                <td>Data Structures and Algorithms Lab</td>
+                <td>MRS. LINDA TOJO(LT)/ <br>DR. SANDHYA DUBEY(SD)</td>
+            </tr>
+            <tr>
+                <td>MCA 4253</td>
+                <td> Java Programming</td>
+                <td>DR. RAMAKRISHNA M(RK)/ <br>DR. RAGHURAM HOLLA(RH)</td>
+                <td>MCA 4262</td>
+                <td>Java Programming Lab</td>
+                <td>DR. RAGHURAM HOLLA(RH)/ <br>DR. VIDYA RAO(VR)</td>
+            </tr>
+            <tr>
+                <td>MCA 4254</td>
+                <td>Web Technologies</td>
+                <td>MR. AKSHAY BHAT(AB)/ <br>DR. MANJUNATH HEGDE(MH)</td>
+                <td>MCA 4263</td>
+                <td>Web Technologies Lab</td>
+                <td>MR. AKSHAY BHAT(AB)/ <br>TOJO THOMAS (TT))</td>
+            </tr>
+            <tr>
+                <td>MCA 5038</td>
+                <td> PE – I NoSQL Database <br> Systems</td>
+                <td>DR. KARUNAKAR KOTEGAR (KK)</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>MCA 5037</td>
+                <td> PE – I Management <br> Information Systems</td>
+                <td>MR. TOJO THOMAS (TT))</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </center>
+    </div>
+
+</body>
+</html>
