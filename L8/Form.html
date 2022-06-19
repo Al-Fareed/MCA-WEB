@@ -101,8 +101,8 @@
     <form action="" id="regForm">
         <h1 style="text-align: center;">Register</h1>
         <div class="tab">
-            <h3>Accouont setup Details</h3>
-           <p> User Name
+            <h3>Account setup Details</h3>
+           <p> User Name</p>
             <input type="text" placeholder="User123" id="uname" oninput="valiateuname()" autofocus>
             <p id="un" class="validation"></p>
             New Password
@@ -237,6 +237,7 @@
     </form>
     <script>
         var currentTab=0;
+        var validn=false;
         showTab(currentTab);
         function showTab(n)
         {
@@ -266,7 +267,7 @@
          }
          fixStepIndicator(n);
         }
-        //Validatio  for Date
+        //Validation  for Date
     function dispDt(){
         
         var today=new Date();
@@ -294,23 +295,30 @@
 
         function nextPrev(n)
         {
-            if(validationForm() || n==-1)
-            {  
-                var x=document.getElementsByClassName("tab");
-                //hides the current tab
-                x[currentTab].style.display = "none";
-                //Adds or Subtracts the tabs
-                currentTab=currentTab+n;
-                //When reached at the end of the tab
-            if(currentTab>=x.length)
+            if(validn || n==-1)
             {
-                document.getElementById("regForm").submit();
-                return false;}
-                showTab(currentTab);
-            }
+                    if(validationForm() || n==-1 )
+                {  
+                    var x=document.getElementsByClassName("tab");
+                    //hides the current tab
+                    x[currentTab].style.display = "none";
+                    //Adds or Subtracts the tabs
+                    currentTab=currentTab+n;
+                    //When reached at the end of the tab
+                    if(currentTab>=x.length)
+                    {
+                        document.getElementById("regForm").submit();
+                        return false;}
+                        showTab(currentTab);
+                    }
+                    else
+                    {
+                        alert("Please enter the details:");
+                    }
+                }
             else
             {
-                alert("Please enter the details:");
+                alert("Please enter valid Details!");
             }
         }
         function validationForm()
@@ -324,11 +332,13 @@
                 {
                     inputEle[i].className = "invalid";
                     valid=false;
+                    validn=false;
                 }
                 else
                 {
                   inputEle[i].className = "valid";
                   valid=true;
+                  validn=true;
                 }
             }
             if (valid)
@@ -361,27 +371,38 @@
         function valiateuname(){
             var userName=document.getElementById("uname").value;
             var regExp=/^[A-Z]+[A-z]+[0-9]+/;
-            if(userName.match(regExp)){
+            if(userName.match(regExp))
+            {
                 document.getElementById("un").innerText="";
                 uname.className='valid';
                 document.getElementById("runame").value=userName;
-                //document.getElementById(").value=;
-            }else{
+                validn=true;
+                console.log("uname"+validn);
+            }
+            else
+            {
                 document.getElementById("un").innerText="*Input AlphaNumeric(Capital letter followed by small letters and Numbers)";
                 uname.className='invalid';
+                validn=false;
+                console.log("uname"+validn);
             }
         }
         //Validate password
         function checkPass(){
             var inputPass=document.getElementById("password").value;
             var passExp=/^(?=.+\d)(?=.+[A-z])(?=.+[$_]).{7,}/;
-            if(inputPass.match(passExp)){
+            if(inputPass.match(passExp))
+            {
                 document.getElementById("ps").innerText="";
                 password.className='valid';
+                validn=true;
+                console.log("chpass"+validn);
             }
             else{
                 document.getElementById("ps").innerText="*Password must be 7 charcters with 1 Number and special charcters($,_)";
                 password.className='invalid';
+                validn=false;
+                console.log("chpass"+validn);
             }
             
         }
@@ -392,10 +413,15 @@
             if(password!==conPass){
                 document.getElementById("cn").innerText="*Password doesnot match";
                 con.className='invalid';
+                validn=false;
+                console.log("chCnpass"+validn);
+
             }
             else{
                 document.getElementById("cn").innerText="";
                 con.className='valid';
+                validn=true;
+                console.log("chCnpass"+validn);
 
             }
         }
@@ -405,16 +431,17 @@
             var inpFname=document.getElementById("fname").value;
             var len=inpFname.length;
             var fnameRegx=/^[A-Z]{1}[a-z]+/;
-            if(inpFname.match(fnameRegx)){
-            if(len<2)
+            if(inpFname.match(fnameRegx))
             {
-                document.getElementById("fnamevalid").innerText="*First Name must  start with Caps and atleast two characters";
-            }
-            else
-            {
-                document.getElementById("fnamevalid").innerText="";
-                lastName(inpFname);
-            }
+                if(len<2)
+                {
+                    document.getElementById("fnamevalid").innerText="*First Name must  start with Caps and atleast two characters";
+                }
+                else
+                {
+                    document.getElementById("fnamevalid").innerText="";
+                    lastName(inpFname);
+                }
             }
             else
             { 
@@ -487,11 +514,13 @@
             document.getElementById("rprj3").value=document.getElementById("prj3").value;
            
         }
-      function gen(){
+      function gen()
+      {
         var ele=document.getElementsByName("gender");
         for (var i=0;i<ele.length;i++)
-         {
-            if(ele[i].checked){
+        {
+            if(ele[i].checked)
+            {
              document.getElementById("rgender").value= ele[i].value;
             }
         }

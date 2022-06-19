@@ -7,7 +7,7 @@ $lastVisit="<p>Your last visit was on ".$_COOKIE['lastVisit'];
 }
 else
 {
- $lastVisit = "<p>This is your first visit!</p>";
+ $lastVisit = "<p>This is your first visit!</p>"; 
 }
 setcookie("lastVisit", date("F j, Y, g:i a"),time()+60*60*24*60);
 ?>
