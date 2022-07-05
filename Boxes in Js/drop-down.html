@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drop Menu</title>
+</head>
+<body>
+    Select any program
+    <select name="programs" id="options" onchange="sel()" >
+        <option value="">--Select--</option>
+        <option value="copy\cookies.html"  >Cookies</option>
+        <option value="copy\Clock.html" >Clock</option>
+        <option value="copy\Mouse Position.html" >Mouse Pointer Location</option>
+        <option value="copy\Hand Drawing.html" >Hand Drawing</option>
+    </select>
+    <script>
+        function sel()
+        {
+            var x=document.getElementById("options").value;
+            open(x,"_self");
+        }
+    </script>
+</body>
+</html>

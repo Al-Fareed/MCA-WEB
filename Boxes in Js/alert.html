@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function dispName()
+        {
+            var name=prompt("Enter your name:");
+            if(name!=""){
+                alert("Welcome "+name);
+                document.write(name+"This is a sample webpage");
+            }
+            else{
+                var n=confirm("Please Enter your Name")
+                if(n==true){
+                    dispName();
+                }else{
+                    alert("You can't access this page without entering your name..");
+                   
+                }
+            }
+        }
+        
+    </script>
+</head>
+<body onload="dispName()">
+</body>
+</html>
